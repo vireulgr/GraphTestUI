@@ -12,7 +12,29 @@
 
     <div id='the'>
         <svg width='960' height='500'>
-            <circle cx='20' cy='20' r='10'></circle>
+            <defs>
+                <g id='node' stroke='steelblue'>
+                    <rect width='100' height='3em' fill='none' />
+                    <text x='5' y='1em' stroke='none' >This is a test</text>
+                    <line x1='0' y1='1.5em' x2='100' y2='1.5em' />
+
+                    <path d='M40,0
+                              A10,10 0 0 1 60,0' 
+                          fill='none' 
+                    />
+
+                    <path d='M40,48
+                              A10,10 0 0 0 60,48' 
+                          fill='none' 
+                    />
+
+                    <!-- <line x1='0' y1='3em' x2='100' y2='3em' /> -->
+                </g>
+            </defs>
+            <use x='50' y='50' href='#node'/>
+            <use x='100' y='130' href='#node'/>
+            <circle cx='15' cy='30' r='10' fill='steelblue'/>
+
             <text y='12'>
                 Hello SVG!
             </text>
